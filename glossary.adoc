@@ -1,0 +1,21 @@
+[[glossary]]
+[appendix, glossary]
+= 术语
+
+AOP :: 面向切面编程
+
+Commons DBCP（通用DBCP） :: 通用数据库连接池 - Apache基金会下的一个库，提供数据源接口池的实现。
+
+CRUD（增删改查） :: 增加，删除，修改，查询 - 基础持久层操作。
+
+DAO :: 数据访问对象 - 把持久化逻辑操作从要持久的对象分离出来的模式。
+
+Dependency Injection（依赖注入） :: 一种从组件外部持有组件依赖的模式，使得组件不用自己去寻找其依赖。详见 link:$$http://en.wikipedia.org/wiki/Dependency_Injection$$[http://en.wikipedia.org/wiki/Dependency_Injection]。
+
+EclipseLink :: 一种实现了JPA的对象关系映射（ORM） - link:$$http://www.eclipselink.org$$[http://www.eclipselink.org]
+
+Hibernate :: 一种实现了JPA的对象关系映射（ORM） - link:$$http://www.hibernate.org$$[http://www.hibernate.org]
+
+JPA :: Java持久化API
+
+Spring :: 一种Java应用框架 - link:$$http://projects.spring.io/spring-framework$$[http://projects.spring.io/spring-framework]

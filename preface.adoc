@@ -1,0 +1,13 @@
+[[preface]]
+= 序
+
+Spring Data JPA提供了支持Java持久化API（JPA）的仓库（repository）。对于需要存取JPA数据资源额应用，它简化了其开发流程。
+
+[[project]]
+== 项目信息
+
+* 版本控制 - http://github.com/spring-projects/spring-data-jpa
+* 漏洞追踪 - https://jira.spring.io/browse/DATAJPA
+* 发布版本（Release）库 - https://repo.spring.io/libs-release
+* 里程碑版本（Milestone）库 - https://repo.spring.io/libs-milestone
+* 预览版本（Snapshot）库 - https://repo.spring.io/libs-snapshot

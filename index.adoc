@@ -1,0 +1,44 @@
+= Spring Data JPA - 参考文档
+Oliver Gierke; Thomas Darimont; Christoph Strobl; Mark Paluch; Jay Bryant
+:revnumber: {version}
+:revdate: {localdate}
+:toc:
+:toc-placement!:
+:linkcss:
+:doctype: book
+:docinfo: shared
+:toclevels: 4
+:source-highlighter: prettify
+:icons: font
+:imagesdir: images
+ifdef::backend-epub3[:front-cover-image: image:epub-cover.png[Front Cover,1050,1600]]
+:spring-data-commons-docs: ../../../../spring-data-commons/src/main/asciidoc
+:spring-framework-docs: http://docs.spring.io/spring-framework/docs/{springVersion}/spring-framework-reference/
+
+(C) 2008-2018 原作者.
+
+NOTE: 本文档的副本可以用于您自己使用或分发给他人，前提是您不能为这些副本收取任何费用，并且每份副本都必须包含版权声明，不管是印刷版还是电子版。
+
+toc::[]
+
+include::preface.adoc[]
+
+include::new-features.adoc[leveloffset=+1]
+include::{spring-data-commons-docs}/dependencies.adoc[leveloffset=+1]
+include::{spring-data-commons-docs}/repositories.adoc[leveloffset=+1]
+
+[[reference]]
+= 参考文档
+
+include::jpa.adoc[leveloffset=+1]
+
+[[appendix]]
+= 附录
+
+:numbered!:
+include::{spring-data-commons-docs}/repository-namespace-reference.adoc[leveloffset=+1]
+include::{spring-data-commons-docs}/repository-populator-namespace-reference.adoc[leveloffset=+1]
+include::{spring-data-commons-docs}/repository-query-keywords-reference.adoc[leveloffset=+1]
+include::{spring-data-commons-docs}/repository-query-return-types-reference.adoc[leveloffset=+1]
+include::faq.adoc[leveloffset=+1]
+include::glossary.adoc[leveloffset=+1]

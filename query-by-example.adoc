@@ -1,0 +1,65 @@
+[[query-by-example.execution]]
+== 按样本查询
+
+在Spring Data JPA中，你可以使用仓库的按样本查询功能，如下所示：
+
+.使用仓库的按样本查询
+====
+[source, java]
+----
+public interface PersonRepository extends JpaRepository<Person, String> { … }
+
+public class PersonService {
+
+  @Autowired PersonRepository personRepository;
+
+  public List<Person> findPeople(Person probe) {
+    return personRepository.findAll(Example.of(probe));
+  }
+}
+----
+====
+
+NOTE: 目前，只有 `SingularAttribute` （单值属性）可用于属性匹配。
+
+属性标识符可接受属性名称（比如 `firstname` 和 `lastname` ）。你可以通过用“.”把属性连接在一起来进行导航。你还可以通过匹配选项和大小写敏感来进一步调整。
+
+以下表格显示了几种不同的 `StringMatcher` 用法，以及用在属性名 `firstname` 上的效果：
+
+[cols="1,2", options="header"]
+.`StringMatcher` 用法
+|===
+| 匹配
+| 逻辑效果
+
+| `DEFAULT` (case-sensitive)
+| `firstname = ?0`
+
+| `DEFAULT` (case-insensitive)
+| `LOWER(firstname) = LOWER(?0)`
+
+| `EXACT`  (case-sensitive)
+| `firstname = ?0`
+
+| `EXACT` (case-insensitive)
+| `LOWER(firstname) = LOWER(?0)`
+
+| `STARTING`  (case-sensitive)
+| `firstname like ?0 + '%'`
+
+| `STARTING` (case-insensitive)
+| `LOWER(firstname) like LOWER(?0) + '%'`
+
+| `ENDING`  (case-sensitive)
+| `firstname like '%' + ?0`
+
+| `ENDING` (case-insensitive)
+| `LOWER(firstname) like '%' + LOWER(?0)`
+
+| `CONTAINING`  (case-sensitive)
+| `firstname like '%' + ?0 + '%'`
+
+| `CONTAINING` (case-insensitive)
+| `LOWER(firstname) like '%' + LOWER(?0) + '%'`
+
+|===
